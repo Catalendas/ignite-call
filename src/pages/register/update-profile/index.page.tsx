@@ -5,10 +5,9 @@ import {
   MultiStep,
   Text,
   TextArea,
-  TextInput,
 } from '@ignite-ui/react'
 import { ArrowRight } from 'phosphor-react'
-import { Container, FormError, Header } from '../style'
+import { Container, Header } from '../style'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
