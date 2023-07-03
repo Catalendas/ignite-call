@@ -27,7 +27,7 @@ export function ClaimUsernameForm() {
     resolver: zodResolver(claimUsernameFormSchema),
   })
 
-  const router = useRouter()
+  const router = useRouter() 
 
   async function handleClaimUsername(data: claimUsernameData) {
     const { username } = data
