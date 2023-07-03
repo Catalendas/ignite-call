@@ -6,6 +6,7 @@ generator client {
 datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
+  relationMode = "prisma"
 }
 
 model User {
@@ -43,6 +44,7 @@ model Account {
 
   @@unique([provider, provider_accountId])
   @@map("accounts")
+  @@index([user_id])
 }
 
 model Session {
@@ -53,6 +55,7 @@ model Session {
   user         User     @relation(fields: [user_id], references: [id], onDelete: Cascade)
 
   @@map("sessions")
+  @@index([user_id])
 }
 
 model UserTimerInterval {
@@ -80,6 +83,7 @@ model Scheduling {
   user_id String
   
   @@map("schedulings")
+  @@index([user_id])
 }
 
 
