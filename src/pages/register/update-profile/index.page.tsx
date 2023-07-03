@@ -30,7 +30,7 @@ export default function UpdateProfile() {
   const {
     register,
     handleSubmit,
-    formState: { errors, isSubmitting },
+    formState: { isSubmitting },
   } = useForm<UpdateProfileFormData>({
     resolver: zodResolver(updateProfileFormSchema),
   })
